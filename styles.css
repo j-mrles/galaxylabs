@@ -1,0 +1,45 @@
+/* styles.css */
+body {
+    background-color: white; /* Set background color of homepage to white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+.container {
+    text-align: center; /* Center align content within the container */
+    position: relative; /* Make the container relative for absolute positioning */
+}
+
+#logo {
+    opacity: 0; /* Start with the logo hidden */
+    animation: fadeIn 1s forwards; /* Use animation with 1 second duration */
+}
+
+#under-construction {
+    position: absolute;
+    top: calc(100% + 20px); /* Position below the logo */
+    right: 0; /* Start off screen to the right */
+    color: black; /* Set paragraph text color to black */
+    opacity: 0; /* Start with the paragraph hidden */
+    animation: slideIn 1s forwards 1s; /* Slide in from the right after 1 second delay */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fade in to full opacity */
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        right: 100%; /* Start off screen to the right */
+    }
+    100% {
+        opacity: 1;
+        right: 0; /* Slide in to the center */
+    }
+}
