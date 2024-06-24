@@ -1,45 +1,51 @@
-/* styles.css */
 body {
-    background-color: white; /* Set background color of homepage to white */
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
     margin: 0;
+    position: relative;
+    top: 150px;
 }
 
 .container {
-    text-align: center; /* Center align content within the container */
-    position: relative; /* Make the container relative for absolute positioning */
+    text-align: center;
+    position: relative;
 }
 
 #logo {
-    opacity: 0; /* Start with the logo hidden */
-    animation: fadeIn 1s forwards; /* Use animation with 1 second duration */
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 
-#under-construction {
-    position: absolute;
-    top: calc(100% + 20px); /* Position below the logo */
-    right: 0; /* Start off screen to the right */
-    color: black; /* Set paragraph text color to black */
-    opacity: 0; /* Start with the paragraph hidden */
-    animation: slideIn 1s forwards 1s; /* Slide in from the right after 1 second delay */
+p {
+    position: relative;
 }
 
 @keyframes fadeIn {
     to {
-        opacity: 1; /* Fade in to full opacity */
+        opacity: 1;
     }
 }
 
 @keyframes slideIn {
     0% {
         opacity: 0;
-        right: 100%; /* Start off screen to the right */
+        transform: translateX(100%);
     }
     100% {
         opacity: 1;
-        right: 0; /* Slide in to the center */
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #under-construction {
+        top: calc(100% + 10px);
+        font-size: 14px;
+    }
+
+    #logo {
+        width: 80%;
     }
 }
