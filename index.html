@@ -13,8 +13,6 @@
             align-items: center;
             text-align: center;
             font-family: Arial, sans-serif;
-            background-image: url('./images/space.gif'); /* Replace with the path to your image */
-            color:white
         }
 
         .container {
@@ -47,15 +45,9 @@
     </div>
 
     <script>
-        function calculateThreeMonthsFromNow() {
-            const now = new Date();
-            const threeMonthsFromNow = new Date(now.setMonth(now.getMonth() + 1));
-            return threeMonthsFromNow.getTime();
-        }
-
         function updateCountdown() {
             const countdownElement = document.getElementById('countdown');
-            const targetDate = calculateThreeMonthsFromNow();
+            const targetDate = new Date('August 1, 2024 00:00:00').getTime();
 
             const interval = setInterval(function() {
                 const now = new Date().getTime();
