@@ -3,73 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <style>
-        body, html {
-            background-image: url('./images/space.gif'); /* Replace with the path to your image */
-            color: white;
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #logo {
-            max-width: 100%;
-            height: auto;
-        }
-
-        #under-construction {
-            margin: 20px 0;
-            font-size: 1.5em;
-        }
-
-        #countdown {
-            font-size: 1.5em;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Galaxy Labs</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav id="navbar">
+        <img id="logonav" src="./images/galaxylabsicon.png" alt="Galaxy Labs Logo">
+        <div id="navigation">
+            <!-- <a href="#home">Home</a> -->
+            <!-- <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a> -->
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                &#9776;
+            </a>
+        </div>
+        
+    </nav>
     <div class="container">
-        <img id="logo" src="./images/galaxylabsicon.png" alt="Logo">
-        <p id="under-construction">Currently under construction...</p>
-        <div id="countdown"></div>
+        <header id="home">
+            <img id="logo" src="./images/galaxylabslogo.png" alt="Galaxy Labs Logo">
+            <p class="slide-in-left">Innovating the Future</p>
+            <button class="button">Learn more</button>
+        </header>
+
+        <section id="about">
+            <h2>What we do?</h2>
+            <p>At Galaxy Labs, we are dedicated to pushing the boundaries of technology to create innovative solutions that improve lives. Our team of experts is passionate about developing cutting-edge software and hardware to meet the needs of our clients and drive the tech industry forward.</p>
+        </section>
+        <section id="stats">
+            <h2>Our Current Focus</h2>
+            <div class="stats-container">
+                <div class="stat">
+                    <h3>Global AI Adoption</h3>
+                    <span id="global-ai">37%</span>
+                    <p>Percentage of industries adopting AI solutions</p>
+                </div>
+                <div class="stat">
+                    <h3>Custom Software Development Expansion</h3>
+                    <span id="custom-swe-growth">25%</span>
+                    <p>Forecasted annual growth rate in custom software development</p>
+                </div>
+                
+                <div class="stat">
+                    <h3>Enterprise Software Market Growth</h3>
+                    <span id="global-swe-stat">12%</span>
+                    <p>Annual growth rate in enterprise software solutions</p>
+                </div>
+        
+    
+            </div>
+        </section>
+        
+        
+        
+
+        <section >
+            <h2>Our Solutions</h2>
+            <div class="services-container" id="services">
+                <img id="earth-home" src="./images/earth.jpg" alt="Earth Image">
+                <div id="services-list">
+                    <ul>
+                        <li><strong><h2>Let's develop together!</h2><br></strong></li>
+                        <li><strong>Software Development:</strong> Custom software solutions tailored to your business needs.</li>
+                        <li><strong>AI and Machine Learning:</strong> Advanced AI solutions to automate and enhance your processes.</li>
+                        <li><strong>Cloud Computing:</strong> Scalable cloud solutions to optimize your infrastructure.</li>
+                        <li><strong>IoT Solutions:</strong> Internet of Things (IoT) devices and systems for smarter operations.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="more-services">
+            <h2 style="color: white;">More Services</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <h3>Custom Software Solutions</h3>
+                    <p>Our team of experienced developers will work closely with you to understand your business requirements, goals, and pain points to develop a solution that is tailored to your unique needs.</p>
+                    <a href="#learn-more-custom-software" class="learn-more"></a>
+                </div>
+                <div class="service">
+                    <h3>Mobile Applications</h3>
+                    <p>Our team of developers can create, design, and rebuild any application to attract more customers and increase your business revenue.</p>
+                    <a href="#learn-more-mobile-apps" class="learn-more"></a>
+                </div>
+
+                <div class="service">
+                    <h3>Web Application Development</h3>
+                    <p>Our team of experienced developers have a deep understanding of the latest technologies and frameworks that are essential for creating high-performance, scalable, and secure web applications.</p>
+                    <a href="#learn-more-web-app-dev" class="learn-more"></a>
+                </div>
+                <div class="service">
+                    <h3>API Integration</h3>
+                    <p>We can integrate your off-the-shelf software utilizing API configurations into your custom software. Whether you need to integrate your CRM system with your accounting software or connect your e-commerce platform with your shipping provider, our team can help.</p>
+                    <a href="#learn-more-api-integration" class="learn-more"></a>
+                </div>
+                <div class="service">
+                    <h3>Data Analysis and Visualization</h3>
+                    <p>Our experts can help you make sense of your data, providing insights and visualizations that drive better decision-making.</p>
+                    <a href="#learn-more-data-analysis" class="learn-more"></a>
+                </div>
+                <div class="service">
+                    <h3>Cloud Solutions</h3>
+                    <p>We offer comprehensive cloud solutions, including cloud migration, management, and optimization, to ensure your business runs smoothly and efficiently in the cloud.</p>
+                    <a href="#learn-more-cloud-solutions" class="learn-more"></a>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <section id="projects">
+
+
+            <section id="software-problem">
+                <div class="left-section">
+                    <p class="stacked-text">Building.<br>
+                        <br>Innovating.<br><br>
+                        Together.</p>
+                </div>
+                <div class="right-section">
+                    <div class="info-section">
+                        <h2>HAVE A SOFTWARE PROBLEM?</h2>
+                        <p>Together, let’s find a solution.</p>
+                        <a href="https://www.example.com" style="text-decoration: none; color: white;">
+                            <h1>Contact us here</h1>
+                        </a>
+                                            </div>
+                    <!-- <div class="form-section">
+                        <p>"*" indicates required fields</p>
+                        <form>
+                            <label for="first-name">First name*</label>
+                            <input type="text" id="first-name" name="first-name">
+            
+                            <label for="last-name">Last name*</label>
+                            <input type="text" id="last-name" name="last-name">
+            
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+            
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="email">
+            
+                            <label for="comment">Comment or message</label>
+                            <textarea id="comment" name="comment"></textarea>
+            
+                            <label for="captcha">Captcha*</label>
+                            <input type="text" id="captcha" name="captcha">
+            
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div> -->
+                </div>
+            </section>
+            
+        </section>
+        <footer>
+            <p>&copy; 2024 Galaxy Labs. All rights reserved.</p>
+        </footer>
     </div>
-
-    <script>
-        function updateCountdown() {
-            const countdownElement = document.getElementById('countdown');
-            const targetDate = new Date('August 1, 2024 00:00:00').getTime();
-
-            const interval = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = targetDate - now;
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-                if (distance < 0) {
-                    clearInterval(interval);
-                    countdownElement.innerHTML = "Time's up!";
-                }
-            }, 1000);
-        }
-
-        document.addEventListener('DOMContentLoaded', updateCountdown);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
