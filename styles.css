@@ -172,6 +172,7 @@ body {
     padding: 200px 20px;
 }
 #logonav {
+    
     max-height: 50px;
     width: auto;
     vertical-align: middle;
@@ -189,6 +190,7 @@ body {
     opacity: 0;
     animation: fadeIn 2s forwards;
     padding-top: 20px;
+   
 }
 
 p {
@@ -206,7 +208,6 @@ p {
 #services {
     text-align: left;
     padding: 40px 20px;
-    background-color: #ffffff;
     border-bottom: 1px solid #e9ecef;
 }
 
@@ -396,7 +397,6 @@ p {
 /* Header styles */
 header {
     padding: 60px 20px;
-    background-color: #88c2ff3c; /* Blue background */
     border-bottom: 1px solid #e9ecef;
     color: white; /* Text color change for better contrast */
 }
