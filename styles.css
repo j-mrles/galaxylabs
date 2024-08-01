@@ -4,7 +4,7 @@ body {
     margin: 0;
     display: flex;
     border-radius: 10px;
-    background-image: url('./images/space.gif'); /* Add your background image here */
+    background-image: url('./images/space.gif');
     background-position: center;
 }
 /* General button styles */
@@ -20,76 +20,92 @@ body {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
-
-.slide-in-left{
-    color: rgb(190, 190, 190);
+.button .icon {
+    margin-right: 8px;
+    vertical-align: middle;
 }
-
-.more-services h2 {
-    color: white;
+.button:active {
+    transform: scale(0.95);
 }
-/* Primary button */
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+/* Button colors */
 .button-primary {
     background-color: #007BFF;
     color: white;
 }
-
 .button-primary:hover {
     background-color: #0056b3;
 }
-
-/* Secondary button */
 .button-secondary {
     background-color: #6c757d;
     color: white;
 }
-
 .button-secondary:hover {
     background-color: #565e64;
 }
-
-/* Success button */
 .button-success {
     background-color: #28a745;
     color: white;
 }
-
 .button-success:hover {
     background-color: #218838;
 }
-
-/* Danger button */
 .button-danger {
     background-color: #dc3545;
     color: white;
 }
-
 .button-danger:hover {
     background-color: #c82333;
 }
-
-/* Warning button */
 .button-warning {
     background-color: #ffc107;
     color: black;
 }
-
 .button-warning:hover {
     background-color: #e0a800;
+}
+.button-info {
+    background-color: #17a2b8;
+    color: white;
+}
+.button-info:hover {
+    background-color: #138496;
+}
+.button-light {
+    background-color: #f8f9fa;
+    color: black;
+}
+.button-light:hover {
+    background-color: #e2e6ea;
+}
+.button-dark {
+    background-color: #343a40;
+    color: white;
+}
+.button-dark:hover {
+    background-color: #1d2124;
+}
+/* Slide-in text */
+.slide-in-left {
+    color: rgb(190, 190, 190);
+}
+.more-services h2 {
+    color: white;
 }
 /* Stats section */
 #stats {
     text-align: center;
     padding: 80px 20px;
 }
-
 .stats-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     justify-items: center;
 }
-
 .stat {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -97,92 +113,38 @@ body {
     transition: transform 0.3s ease;
     text-align: center;
 }
-
 .stat:hover {
     transform: translateY(-5px);
 }
-
 .stat h3 {
     font-size: 1.5em;
     color: #343a40;
     margin-bottom: 10px;
 }
-
 .stat span {
     display: block;
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 10px;
 }
-
 .stat p {
     color: #6c757d;
     font-size: 1.1em;
     margin: 0;
 }
-
-
-/* Info button */
-.button-info {
-    background-color: #17a2b8;
-    color: white;
-}
-
-.button-info:hover {
-    background-color: #138496;
-}
-
-/* Light button */
-.button-light {
-    background-color: #f8f9fa;
-    color: black;
-}
-
-.button-light:hover {
-    background-color: #e2e6ea;
-}
-
-/* Dark button */
-.button-dark {
-    background-color: #343a40;
-    color: white;
-}
-
-.button-dark:hover {
-    background-color: #1d2124;
-}
-
-/* Button with icon */
-.button .icon {
-    margin-right: 8px;
-    vertical-align: middle;
-}
-
-/* Button active and focus states */
-.button:active {
-    transform: scale(0.95);
-}
-
-.button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
-}
-
-#home{
+/* Home section */
+#home {
     padding: 200px 20px;
 }
 #logonav {
-    
     max-height: 50px;
     width: auto;
     vertical-align: middle;
     display: inline;
 }
-
 .container {
     text-align: center;
 }
-
 #logo, #genesis {
     max-height: 500px;
     width: auto;
@@ -190,55 +152,37 @@ body {
     opacity: 0;
     animation: fadeIn 2s forwards;
     padding-top: 20px;
-   
 }
-
-p {
-    color: #6c757d;
-    font-size: 1.2em;
-    margin: 20px 0;
-}
-
-#about {
+#about, #services, section {
     padding: 40px 20px;
     background-color: #ffffff;
     border-bottom: 1px solid #e9ecef;
 }
-
-#services {
-    text-align: left;
-    padding: 40px 20px;
-    border-bottom: 1px solid #e9ecef;
+#about, #services, p {
+    color: #6c757d;
+    font-size: 1.1em;
 }
-
 #earth-home {
     max-width: 45%;
     float: left;
     margin-right: 20px;
     border-radius: 10%;
-    border-width: 10px; /* Thick border */
-    border-style: solid; /* Solid border style */
+    border: 10px solid;
 }
-
-
-
 #services-list {
     max-width: 45%;
     float: right;
 }
-
 .services-container::after {
     content: "";
     display: table;
     clear: both;
 }
-
 @keyframes fadeIn {
     to {
         opacity: 1;
     }
 }
-
 /* Navbar styles */
 #navbar {
     background-color: #000000;
@@ -253,10 +197,9 @@ p {
     padding: 0 10px;
     display: flex;
 }
-#navigation{
+#navigation {
     margin-right: 25px;
 }
-
 #navbar a {
     float: left;
     display: block;
@@ -266,312 +209,230 @@ p {
     text-decoration: none;
     font-size: 1em;
 }
-
 #navbar a:hover {
     background-color: #495057;
     color: #f8f9fa;
 }
-
 #navbar .icon {
     display: none;
 }
-
-
 /* Media Query for Smaller Devices */
 @media screen and (max-width: 768px) {
-    /* Body adjustments */
     body {
-        overflow-x: hidden; /* Prevent horizontal scroll */
-        padding: 0; /* Remove default padding */
-        margin: 0; /* Remove default margin */
-        display: block; /* Ensure content flow correctly */
+        overflow-x: hidden;
+        padding: 0;
+        margin: 0;
+        display: block;
     }
-
     #logo {
         max-width: 50%;
     }
-
-    /* Navbar adjustments */
     #navbar {
         flex-direction: column;
         align-items: flex-start;
         padding: 10px;
         box-shadow: none;
-        background-color: #000; /* Ensure background color is visible on mobile */
+        background-color: #000;
     }
-
     #navbar a {
         float: none;
         display: block;
         padding: 10px;
         font-size: 1em;
         text-align: left;
-        color: white; /* Ensure text color contrasts well */
+        color: white;
     }
-
     #navbar a.icon {
         display: block;
         margin-left: auto;
         font-size: 1.5em;
         cursor: pointer;
     }
-
     #navbar .nav-links {
-        display: none; /* Hide links by default */
-        width: 100%; /* Full width for mobile menu */
+        display: none;
+        width: 100%;
     }
-
     #navbar.responsive .nav-links {
-        display: block; /* Show links when menu is active */
+        display: block;
     }
-
     #navbar.responsive .icon {
         margin-left: auto;
     }
-
-    /* Adjustments for buttons */
     .button {
         padding: 10px 15px;
         font-size: 0.9em;
     }
-
-    /* Stats section */
     #stats {
         padding: 40px 10px;
     }
-
     .stats-container {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
-
-    /* Section padding adjustments */
     section {
         padding: 20px 10px;
     }
-
-    /* Services grid adjustments */
     .services-grid {
         grid-template-columns: 1fr;
         gap: 10px;
     }
-
-    /* Software problem section adjustments */
     #software-problem {
         flex-direction: column;
     }
-
     #earth-home, #services-list {
         max-width: 100%;
         float: none;
         margin-right: 0;
-        border-width: 5px; /* Reduced border width */
+        border-width: 5px;
     }
-
     .left-section, .right-section {
         padding: 15px;
     }
-
     .stacked-text {
         font-size: 2em;
     }
-
-    /* Form adjustments */
     .form-section p {
         font-size: 0.8em;
     }
-
     form {
         grid-template-columns: 1fr;
     }
-
     input, textarea {
         font-size: 0.9em;
     }
-
-    /* Footer adjustments */
     footer {
         padding: 10px;
     }
 }
-
 /* Header styles */
 header {
     padding: 60px 20px;
     border-bottom: 1px solid #e9ecef;
-    color: white; /* Text color change for better contrast */
+    color: white;
 }
-
-#more-services{
-    background-color: #88c2ff3c; /* Blue background */
-
-    
+/* More services */
+#more-services {
+    background-color: #88c2ff3c;
 }
-
 /* Section styles */
-section {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e9ecef;
-}
-
 section h2 {
     font-size: 2em;
     color: #343a40;
     margin-bottom: 20px;
 }
-
 section p, section ul {
-    color: #6c757d;
     font-size: 1.1em;
 }
-
 /* Services grid */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    
 }
-
 .service {
     padding: 20px;
     border-radius: 8px;
     background-color: #f9f9f9;
-
 }
-
 .learn-more {
     display: inline-block;
     margin-top: 10px;
     text-decoration: none;
     font-weight: bold;
 }
-
 .learn-more:hover {
     text-decoration: underline;
 }
-
 /* List styles */
 ul {
     list-style-type: none;
     padding: 0;
 }
-
 ul li {
     margin: 10px 0;
 }
-
+/* Software problem section */
 #software-problem {
     display: flex;
     width: 80%;
     margin: 0 auto;
     border-radius: 10px;
-    overflow: hidden; /* Ensures border-radius is applied properly */
-    background-image: url('./images/space.gif'); /* Add your background image here */
+    overflow: hidden;
+    background-image: url('./images/space.gif');
     background-position: center;
     color: white;
 }
-
 .left-section, .right-section {
     flex: 1;
     padding: 20px;
-    color: #fff; /* Adjust the text color as needed */
 }
-
 .left-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
 }
-
-.stacked-text {
-    font-size: 2.5em; /* Adjust the font size as needed */
-    line-height: 1.2; /* Adjust the line height for spacing */
-    text-align: center; /* Center align the text */
-}
-
 .right-section {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.stacked-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+#software-problem p {
+    font-size: 1.2em;
+}
+.form-section {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
-
-.info-section {
-    padding: 20px;
-    text-align: center;
-}
-
-.info-section h2 {
-    margin: 0 0 10px;
-    font-weight: 500;
-}
-
-.info-section p {
-    margin: 0;
-    font-weight: 300;
-}
-
-.form-section {
-    padding: 20px;
-}
-
 .form-section p {
-    font-size: 0.9em;
-    color: white;
-    margin: 0 0 10px;
+    font-size: 1em;
+    margin: 5px 0;
 }
-
 form {
     display: grid;
-    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
 }
-
-label {
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-
 input, textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    margin: 5px 0;
+    border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
 }
-
-input:focus, textarea:focus {
-    border-color: black;
-    outline: none;
+textarea {
+    resize: vertical;
 }
-
-input[type="submit"] {
-    background: black;
+form button {
+    grid-column: span 2;
+    padding: 10px 20px;
+    background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    padding: 12px;
-    font-size: 1em;
-    font-weight: 500;
-    transition: background 0.3s ease;
 }
-
-input[type="submit"]:hover {
-    background: white;
+form button:hover {
+    background-color: #0056b3;
 }
-
-
 /* Footer styles */
 footer {
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
     padding: 20px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    text-align: center;
+    background-color: #343a40;
+    color: #ffffff;
 }
-
 footer p {
-    margin: 0;
-    font-size: 0.9em;
+    margin: 5px 0;
+    font-size: 1em;
+}
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
 }
