@@ -6,13 +6,22 @@ let footer = document.querySelector("footer");
 // Scroll event handler
 window.onscroll = function() {
     let currentScrollpos = window.pageYOffset;
+    let windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    let documentHeight = document.documentElement.scrollHeight;
+
     if (prevScrollpos > currentScrollpos) {
         header.style.top = "0";
-        footer.style.bottom = "0"; // Adjust based on your footer height
     } else {
         header.style.top = "-60px"; // Adjust based on your header height
-        footer.style.bottom = "-100px"; // Adjust based on your footer height
     }
+
+    // Show footer when scrolled to the bottom
+    if (currentScrollpos + windowHeight >= documentHeight) {
+        footer.style.bottom = "0";
+    } else {
+        footer.style.bottom = "-60px"; // Adjust based on your footer height
+    }
+
     prevScrollpos = currentScrollpos;
 };
 

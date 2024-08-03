@@ -7,6 +7,7 @@ body {
     background-image: url('./images/space.gif');
     background-position: center;
 }
+
 /* General button styles */
 .button {
     display: inline-block;
@@ -31,6 +32,7 @@ body {
     outline: none;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
+
 /* Button colors */
 .button-primary {
     background-color: #007BFF;
@@ -88,6 +90,7 @@ body {
 .button-dark:hover {
     background-color: #1d2124;
 }
+
 /* Slide-in text */
 .slide-in-left {
     color: rgb(190, 190, 190);
@@ -95,6 +98,7 @@ body {
 .more-services h2 {
     color: white;
 }
+
 /* Stats section */
 #stats {
     text-align: center;
@@ -132,6 +136,7 @@ body {
     font-size: 1.1em;
     margin: 0;
 }
+
 /* Home section */
 #home {
     padding: 200px 20px;
@@ -183,6 +188,7 @@ body {
         opacity: 1;
     }
 }
+
 /* Navbar styles */
 #navbar {
     background-color: #000000;
@@ -213,9 +219,7 @@ body {
     background-color: #495057;
     color: #f8f9fa;
 }
-#navbar .icon {
-    display: none;
-}
+
 /* Media Query for Smaller Devices */
 @media screen and (max-width: 768px) {
     body {
@@ -227,37 +231,7 @@ body {
     #logo {
         max-width: 50%;
     }
-    #navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-        box-shadow: none;
-        background-color: #000;
-    }
-    #navbar a {
-        float: none;
-        display: block;
-        padding: 10px;
-        font-size: 1em;
-        text-align: left;
-        color: white;
-    }
-    #navbar a.icon {
-        display: block;
-        margin-left: auto;
-        font-size: 1.5em;
-        cursor: pointer;
-    }
-    #navbar .nav-links {
-        display: none;
-        width: 100%;
-    }
-    #navbar.responsive .nav-links {
-        display: block;
-    }
-    #navbar.responsive .icon {
-        margin-left: auto;
-    }
+
     .button {
         padding: 10px 15px;
         font-size: 0.9em;
@@ -303,16 +277,19 @@ body {
         padding: 10px;
     }
 }
+
 /* Header styles */
 header {
     padding: 60px 20px;
     border-bottom: 1px solid #e9ecef;
     color: white;
 }
+
 /* More services */
 #more-services {
     background-color: #88c2ff3c;
 }
+
 /* Section styles */
 section h2 {
     font-size: 2em;
@@ -322,6 +299,7 @@ section h2 {
 section p, section ul {
     font-size: 1.1em;
 }
+
 /* Services grid */
 .services-grid {
     display: grid;
@@ -342,6 +320,7 @@ section p, section ul {
 .learn-more:hover {
     text-decoration: underline;
 }
+
 /* List styles */
 ul {
     list-style-type: none;
@@ -350,6 +329,7 @@ ul {
 ul li {
     margin: 10px 0;
 }
+
 /* Software problem section */
 #software-problem {
     display: flex;
@@ -365,69 +345,57 @@ ul li {
     flex: 1;
     padding: 20px;
 }
-.left-section {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-.right-section {
-    background-color: rgba(0, 0, 0, 0.3);
-}
+
 .stacked-text {
-    display: inline-block;
-    vertical-align: middle;
-}
-#software-problem p {
-    font-size: 1.2em;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 .form-section {
-    display: flex;
-    flex-direction: column;
     margin-top: 20px;
 }
 .form-section p {
-    font-size: 1em;
-    margin: 5px 0;
+    font-size: 1.2em;
 }
 form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+    gap: 20px;
 }
 input, textarea {
-    width: 100%;
     padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 textarea {
-    resize: vertical;
+    grid-column: span 2;
 }
-form button {
+button {
     grid-column: span 2;
     padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
     background-color: #007BFF;
-    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
-form button:hover {
+button:hover {
     background-color: #0056b3;
 }
-/* Footer styles */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Footer */
 footer {
     padding: 20px;
     text-align: center;
-    background-color: #343a40;
-    color: #ffffff;
-}
-footer p {
-    margin: 5px 0;
-    font-size: 1em;
+    color: white;
 }
 footer a {
     color: #007BFF;
