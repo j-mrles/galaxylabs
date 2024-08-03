@@ -9,13 +9,14 @@ window.onscroll = function() {
     let windowHeight = window.innerHeight || document.documentElement.clientHeight;
     let documentHeight = document.documentElement.scrollHeight;
 
+    // Show/hide navbar
     if (prevScrollpos > currentScrollpos) {
         header.style.top = "0";
     } else {
         header.style.top = "-60px"; // Adjust based on your header height
     }
 
-    // Show footer when scrolled to the bottom
+    // Show/hide footer based on scroll position
     if (currentScrollpos + windowHeight >= documentHeight) {
         footer.style.bottom = "0";
     } else {
@@ -35,14 +36,18 @@ function toggleNavbar() {
 document.addEventListener("DOMContentLoaded", function() {
     // Select the stats section and statistic elements
     const statsSection = document.getElementById('stats');
+    const industryStatsSection = document.getElementById('industry-stats');
     const aiStatElement = document.getElementById('ai-stat');
     const sweStatElement = document.getElementById('swe-stat');
     const devStatElement = document.getElementById('dev-stat');
+    const techIndustryStatElement = document.getElementById('tech-industry-stat');
 
     // Define your actual statistics here
     const aiStat = 37;
     const sweStat = 25;
     const devStat = 12;
+    const techIndustryStat = 15;
+
 
     // Function to animate counting up to the actual statistics
     function animateValue(element, start, end, duration) {
@@ -67,6 +72,8 @@ document.addEventListener("DOMContentLoaded", function() {
             animateValue(aiStatElement, 0, aiStat, 500);
             animateValue(sweStatElement, 0, sweStat, 500);
             animateValue(devStatElement, 0, devStat, 500);
+            animateValue(techIndustryStatElement, 0, techIndustryStat, 500);
+
         }
     }
 
@@ -81,6 +88,6 @@ document.addEventListener("DOMContentLoaded", function() {
         );
     }
 
-    // Start counting up statistics when the section is scrolled into view
+    // Start counting up statistics when the sections are scrolled into view
     window.addEventListener('scroll', handleScroll);
 });
