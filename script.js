@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const devStatElement = document.getElementById('dev-stat');
 
     // Define your actual statistics here
-    const aiStat = 105;
-    const sweStat = 78;
-    const devStat = 92;
+    const aiStat = 37;
+    const sweStat = 25;
+    const devStat = 12;
 
     // Function to animate counting up to the actual statistics
     function animateValue(element, start, end, duration) {
